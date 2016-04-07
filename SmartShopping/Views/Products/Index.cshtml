@@ -10,15 +10,15 @@
     @Html.ActionLink("Create New", "Create", new { @class="btn btn-success"})
     @*<a class="btn btn-success" href="/Products/Create">Create New</a>*@
 </p>
-<table class="table">
+<table class="table product-adjustment">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.product_name)
         </th>
-        <th class="mobile-hidden">
+        <th class="product-des mobile-hidden">
             @Html.DisplayNameFor(model => model.product_des)
         </th>
-        <th class="mobile-hidden">
+        <th class="price mobile-hidden">
             @Html.DisplayNameFor(model => model.price)
         </th>
         <th></th>
@@ -29,16 +29,16 @@
         <td>
             @Html.DisplayFor(modelItem => item.product_name)
         </td>
-        <td class="mobile-hidden">
+        <td class="product-des mobile-hidden">
             @Html.DisplayFor(modelItem => item.product_des)
         </td>
-        <td class="mobile-hidden">
+        <td class="price mobile-hidden">
             @Html.DisplayFor(modelItem => item.price)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.product_id }, new { @class="fa fa-edit"}) |
-            @Html.ActionLink("Details", "Details", new { id=item.product_id }, new {  @class= "fa fa-file-o" }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.product_id }, new { @class= "fa fa-remove"})
+        <td class="button-section">
+            @Html.ActionLink("Edit", "Edit", new { id=item.product_id }, new { @class= "fa fa-edit fa-lg green" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.product_id }, new {  @class= "fa fa-file-o fa-lg grey" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.product_id }, new { @class= "fa fa-remove fa-lg red" })
         </td>
     </tr>
 }
